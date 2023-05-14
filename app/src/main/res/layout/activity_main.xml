@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="130dp"
+        android:id="@+id/lin"
+        android:background="@color/teal_200"
+        android:orientation="vertical" />-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/a"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/white"
+                android:hint="Username (Mobile No)">
+
+                <EditText
+                    android:id="@+id/uusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app_name"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:textColorHint="@color/white"
+                app:endIconMode="password_toggle">
+
+                <EditText
+                    android:id="@+id/upassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app_name"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Confirm Password"
+                android:textColorHint="@color/white"
+                app:endIconMode="password_toggle">
+
+                <EditText
+                    android:id="@+id/urepassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/app_name"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnregister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/black"
+                android:padding="5dp"
+                android:text="Register"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/uglogin"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20sp"
+                android:onClick="login"
+                android:text="Already Have An Account ? LOGIN"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ProgressBar
+                android:id="@+id/probar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cardid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:progressTint="@color/black"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+
+        <!--    <LinearLayout-->
+        <!--        android:layout_width="415dp"-->
+        <!--        android:layout_height="200dp"-->
+        <!--        android:layout_below="@+id/cardid"-->
+        <!--        android:background="@color/teal_200" />-->
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
